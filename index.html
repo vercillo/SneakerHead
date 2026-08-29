@@ -36,26 +36,90 @@
             <h2> Nossos Tênis</h2>
             <div>
                 <article>
-                    <h3> Adidas Yeezy Zebra</h3>
+                    <span class="badge">Lançamento</span>
                     <img src="img/YeezyZebra.jpg" alt="Adidas Yeezy 350 Zebra">
+                    <h3> Adidas Yeezy Zebra</h3>
                     <p> O estilo para o seu dia.</p>
                     <p> R$ 2.000,00</p>
                 </article>
 
                 <article>
-                    <h3> Nike Dunk Low Panda</h3>
+                    <span class="badge">Desconto</span>
                     <img src="img/NikeDunkPanda.jpg" alt="Nike Dunk Low Panda">
+                    <h3> Nike Dunk Low Panda</h3>
                     <p> A leveza para o seu dia.</p>
-                    <p> R$ 899,99</p>
+                    <del>R$ 899,99</del>
+                    <p> R$ 799,99</p>
                 </article>
 
                 <article>
-                    <h3> Adidas Samba</h3>
                     <img src="img/AdidasSamba.png" alt="Adidas Samba OG">
+                    <h3> Adidas Samba</h3>
                     <p> O conforto para o seu dia.</p>
-                    <p> R$ 799,99</p>
+                    <p> R$ 699,99</p>
+                    <button type="button" onclick="comprar('Adidas Samba', 699,99)">Comprar</button>
                 </article>
             </div>
+        </section>
+
+        <section id="guia">
+            <h2>Guia de Tamanhos</h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Numeração (BR)</th>
+                            <th scope="col">Tamanho do Pé</th>
+                            <th scope="col">Disponibilidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>33</td>
+                            <td>22,0 cm</td>
+                            <td><h4>Em estoque</h4></td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>22,7 cm</td>
+                            <td><h4>Em estoque</h4></td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>23,3 cm</td>
+                            <td><h4>Em estoque</h4></td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>24,0 cm</td>
+                            <td><h4>Em estoque</h4></td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>24,7 cm</td>
+                            <td><h4>Em estoque</h4></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="calculadora">
+            <h2>Calculadora de Frete</h2>
+            <p>Informe o valor da compra e sua região para calcular o frete.</p>
+            <b>Valor da compra</b>
+            <input type="number" id="valorCompra">
+            <b>Região de entrega</b>
+            <select id="regiao">
+                <option value="">Selecione</option>
+                <option value="sudeste">Sudeste</option>
+                <option value="sul">Sul</option>
+                <option value="nordeste">Nordeste</option>                                                
+            </select>
+            <br>
+            <button type="button" onclick="calcularFrete()">Calcular Frete</button>
+            <p id="resultadoFrete"></p>
         </section>
 
         <section id="precos">
@@ -206,7 +270,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button type="submit"><i></i> Cadastrar</button>
+                                        <button type="button" onclick="cadastrar()"><i></i> Cadastrar</button>
                                         <button type="reset">Limpar</button>
                                     </div>
                                 </div>
@@ -225,6 +289,7 @@
         <address>Contato@sneakerhead.com - Whatsapp (21) 90000-0000</address>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>

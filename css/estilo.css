@@ -1,3 +1,7 @@
+ :root{
+    --laranja-marca: #ff6b35;
+ }
+ 
  body {
      font-family: Arial, Helvetica, sans-serif;
      color: black;
@@ -12,9 +16,23 @@
  }
 
  h1 {
-     color: #ff6b35;
+     color: var(--laranja-marca);
      font-size: 40px;
  }
+
+.badge {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: var(--laranja-marca);
+}
+
 
  h1 span {
      color: #e3e8ef;
@@ -23,7 +41,7 @@
  h2 {
      color: black;
      font-size: 26px;
-     border-bottom: 3px solid #ff6b35;
+     border-bottom: 3px solid var(--laranja-marca);
      padding-bottom: 6px;
  }
 
@@ -31,6 +49,9 @@
      color: #000;
  }
 
+ h4 {
+    color: green;  
+ }
  /*cabeçalho/menu */
  header {
      background-color: #0d1b2a;
@@ -54,7 +75,7 @@
  }
 
  nav a:hover {
-     color: #ff6b35;
+     color: var(--laranja-marca);
  }
 
  nav ul {
@@ -131,6 +152,7 @@
  }
 
  #produtos article {
+    position: relative;
      flex: 1 1 260px;
      border-radius: 14px;
      box-shadow: 0 2px 10px rgba(13, 27, 42, 0.06);
@@ -168,9 +190,9 @@
  }
 
  aside.top-bar {
-     background-color: #ff6b35;
+     background-color: var(--laranja-marca);
      /* Fundo Laranja */
-          /* coloquei a margin a padding, ma tive que tirar o  padding do header pq estava empurrando o aside  */
+          /* coloquei a margin a padding, mas tive que tirar o  padding do header pq estava empurrando o aside  */
 
      max-width: 1000px;
      margin: 0 auto;
